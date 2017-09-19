@@ -23,9 +23,11 @@
     * [输入/输出类型](DataCanvas opera/ScrewJack/Output Types.md)
 * [标准模型](biao-zhun-mo-xing.md)
 * [运维指导](DataCanvas yunwei/DataCanvas yunwei.md)
-  * [APS运维](DataCanvas yunwei/APS.md)
+  * [运维简介](DataCanvas yunwei/yun-wei-jian-jie.md)
   * [EDS运维](DataCanvas yunwei/EDS.md)
+  * [APS运维](DataCanvas yunwei/APS.md)
   * [弹性部署平台](DataCanvas yunwei/elastic-deploy.md)
+* 运维简介
 * [ SQL文档](SQL/SQL1.md)
   * [SQL 语言](SQL/SQL2.md)
     * [数据类型](SQL/SQL YUYAN/shu_ju_lei_xing.md)
@@ -112,9 +114,4 @@
   * [APS API](API/APS API/aps api.md)
     * [接口示例](API/APS API/example.md)
     * [接口概述](API/APS API/instructions.md)
-* [DataCanvas 技术白皮书](DataCanvas baipishu/baipishu.md)
-  * [产品概述](DataCanvas baipishu/intro.md)
-  * [产品服务及优势](DataCanvas baipishu/service.md)
-  * [案例分析](DataCanvas baipishu/example.md)
-  * [实现技术](DataCanvas baipishu/tech.md)
 

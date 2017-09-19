@@ -1,11 +1,5 @@
-本手册主要介绍DataCanvas智能数据平台如何运维管理。
-主要包括以下内容：
-<ul>
-<li><a href="APS.md">APS运维管理</a></li>
-<li><a href="EDS.md">EDS运维管理</a></li>
-<li><a href="elastic-deploy.md">弹性部署平台</a></li>
+本部分主要介绍DataCanvas APS智能数据分析平台需要进行的维护任务，帮助用户了解相关的维护工具及其使用方法。
 
-</ul>
 
 
 
