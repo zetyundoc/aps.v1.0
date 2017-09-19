@@ -1,7 +1,7 @@
 # Summary
 
-* [DataCanvas 用户指南](README.md)
-* [DataCanvas 安装手册](DataCanvas install/introduction.md)
+* [DataCanvas APS 产品文档](README.md)
+* [安装手册](DataCanvas install/introduction.md)
   * [EDS 安装手册](DataCanvas install/EDS install/EDS install.md)
   * [APS 安装手册](DataCanvas install/APS install/APS install.md)
 * [DataCanvas 快速入门](getting started.md)
@@ -115,3 +115,4 @@
   * [APS API](API/APS API/aps api.md)
     * [接口示例](API/APS API/example.md)
     * [接口概述](API/APS API/instructions.md)
+
