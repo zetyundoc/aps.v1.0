@@ -1,6 +1,7 @@
 # Summary
 
 * [DataCanvas APS 产品文档](README.md)
+* [产品概述](chan-pin-gai-shu.md)
 * [安装手册](DataCanvas install/introduction.md)
   * [EDS 安装手册](DataCanvas install/EDS install/EDS install.md)
   * [APS 安装手册](DataCanvas install/APS install/APS install.md)
@@ -105,14 +106,5 @@
       * [LIMIT](SQL/SQL syntax/limit.md)
       * [TABLE 命令](SQL/SQL syntax/table_ming_ling.md)
 * [DataCanvas CLI文档](CLI/CLI.md)
-* [DataCanvas API文档](API/api.md)
-  * [EDS API](API/EDS API/eds api.md)
-    * [通过工具调用](API/EDS API/tools.md)
-      * [Ingestion](API/EDS API/ingestion.md)
-      * [创建/更新 Schema](API/EDS API/schema.md)
-      * [表优化](API/EDS API/optimize table.md)
-    * [通过JDBC调用](API/EDS API/jdbc.md)
-  * [APS API](API/APS API/aps api.md)
-    * [接口示例](API/APS API/example.md)
-    * [接口概述](API/APS API/instructions.md)
+* 产品概述
 
