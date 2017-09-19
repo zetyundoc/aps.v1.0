@@ -23,10 +23,6 @@
     * [输入/输出类型](DataCanvas opera/ScrewJack/Output Types.md)
 * [标准模型](biao-zhun-mo-xing.md)
 * [运维指导](DataCanvas yunwei/DataCanvas yunwei.md)
-  * [运维简介](DataCanvas yunwei/yun-wei-jian-jie.md)
-  * [EDS运维](DataCanvas yunwei/EDS.md)
-  * [APS运维](DataCanvas yunwei/APS.md)
-  * [弹性部署平台](DataCanvas yunwei/elastic-deploy.md)
 * 运维简介
 * [ SQL文档](SQL/SQL1.md)
   * [SQL 语言](SQL/SQL2.md)
