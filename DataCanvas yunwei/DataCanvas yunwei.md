@@ -233,7 +233,7 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 2. 启动dockerfly容器。
    `# docker run --name dockerfly --restart=always -d -v /var/run/docker.sock:/var/run/docker.sock  -p 2735:2735 -p 28083:28083 helyho/dockerfly:latest dockerfly`
    dockerfly依赖于socat，因此在启动dockerfly前请先确保系统中已安装socat。
-3. 在浏览器中输入http://&lt;server\_ip&gt;:28083，其中server\_ip为dockerfly所在服务器的IP地址。
+3. 在浏览器中输入[http://&lt;server\_ip&gt;:28083，其中server\_ip为dockerfly所在服务器的IP地址。](http://<server_ip>:28083，其中server_ip为dockerfly所在服务器的IP地址。)
 
 以容器形式安装的dockerfly默认连接到了docker，因此可以直接进行镜像、容器等的管理。默认用户名/密码为admin/1234。
 
@@ -243,33 +243,33 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 在浏览器中访问“[http://APS\_IP：映射后的物理端口号”](http://APS_IP：映射后的物理端口号”)，进入Dockerfly登录界面。通过用户名/密码进行登录。
 
-![](/assets/dockerfly.png)
+![](/DataCanvas yunwei/登录主界面.png)
 
+##### 系统登录界面简介
 
+左侧导航栏中包括&lt;Swarm&gt;、&lt;Node&gt;、&lt;Service&gt;、&lt;Task&gt;、&lt;Container&gt;、&lt;Network&gt;、&lt;Volume&gt;、&lt;Image&gt;和&lt;Setting&gt;等页签。
 
-##### 主界面内容
-
-左侧导航栏中包括Swarm、Node、Service、Task、Container、Network、Volume、Images和Setting等标签页。
-
-首页中可看到当前主机的基本配置。如需切换主机，请点击左侧导航栏中的Setting标签页，然后添加主机，在主机列表中点击Operation列的“Default”按钮即可。
+在页面左侧的导航栏中单击&lt;Summery&gt;页签，即可看到当前主机的基本概况，包括CPU核数、已使用内存、容器和镜像的个数等。
 
 ![](blob:file:///10e05c84-1064-40c1-81f8-829fd3994fd4)
 
-##### 查看所有容器
+##### 管理容器
 
-点击左侧Container标签页，右侧页面会将这台主机上所有的container显示出来。如需切换主机，请点击左侧导航栏中的Setting标签页，然后添加主机，在主机列表中点击Operation列的“Default”按钮即可。
+在页面左侧的导航栏中单击&lt;Container&gt;页签，即可显示当前主机中的容器列表。在该列表中可以查看各容器的端口映射、运行状态等，也可以实现对容器的启停以及删除操作。
 
 ![](blob:file:///a20e1d3f-71cb-49ac-ac3c-e23354734321)
 
-##### 查看所有image
+##### 管理镜像
 
-点击左侧Image标签页，右侧页面会将这台主机上所有的image显示出来。如需切换主机，请点击左侧导航栏中的Setting标签页，然后添加主机，在主机列表中点击Operation列的“Default”按钮即可。
+在页面左侧的导航栏中单击&lt;Image&gt;标签页，即可显示当前主机中的镜像列表。在该列表中可以查看各镜像的名称、创建时间、大小等，也可以实现对镜像的删除等操作。
 
 ![](blob:file:///a8983305-30be-4201-b9eb-acc6b2178416)
 
 ##### 设置（Setting）
 
-Setting页面中主要包括用户管理、添加主机、修改密码和registry（即添加SaaS用户）功能。
+&lt;Setting&gt;页面中主要包括用户管理、添加主机、修改密码和registry（即添加SaaS用户）功能。
+
+Dockerfly支持跨节点的容器管理，即当多台主机上的Docker中都启用Dockerfly容器时，可以在其中一个Dockerfly管理界面实现对所有Docker的管理。要实现该功能，只要将不同的主机节点添加到Dockerfly中即可，在&lt;Setting&gt;页签下，单击“Add a host”即可添加新的Docker主机，单击主机所在行的“Default”，即可在其它页签下实现对该Docker中的容器、镜像等的管理。
 
 ![](blob:file:///e7068841-2427-4f8e-963c-791f4168fc0c)
 
