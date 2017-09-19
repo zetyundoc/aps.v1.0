@@ -89,17 +89,20 @@ nmon -fT -s 30 -c 36
 
 Docker shell常用命令如下表所示，详细使用说明可以通过`docker Command --help`命令进行查询。
 
-|  |  |  |  |  |
-| :--- | :--- | :--- | :--- | :--- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| 命令类型 | 命令关键字 |
+| :--- | :--- |
+| 容器生命周期管理 | run、start、stop、restart、kill、rm、pause、unpause、create、exec |
+| 容器操作 | ps、inspect、top、attach、events、logs、wait、export、port |
+| 容器rootfs命令 | commit、cp、diff |
+| 镜像仓库 | login、pull、push、search |
+| 本地镜像管理 | images、rmi、tag、build、history、save、import |
+| Info\|version | info、version |
 
-#### 容器相关命令举例
+
+
+#### 容器相关命令示例
+
+**容器及镜像管理命令**
 
 * **开启一个容器**
 
@@ -125,55 +128,51 @@ docker rm [OPTIONS] CONTAINER [CONTAINER...]
 Docker  inspect  [OPTIONS]  CONTAINER|IMAGE|TASK [CONTAINER|IMAGE|TASK...]
 ```
 
-* **在docker**
-  **index中搜索image（search）**
+* 在docker index中搜索image（search）
 
 ```
 docker search [OPTIONS] TERM
 ```
 
-* **从docker**
-  **registry**
-  **server**
-  **中下拉image或repository（pull）**
+* 从docker registry server中下拉image或repository（pull）
 
 ```
 docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 ```
 
-* **推送一个image或repository到registry（push）**
+* 推送一个image或repository到registry（push）
 
 ```
 docker push [OPTIONS] NAME[:TAG]
 ```
 
-* **将一个容器固化为一个新的image**
+* 将一个容器固化为一个新的image
 
 ```
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 ```
 
-**查看服务状态命令举例：**
+**查看服务状态命令：**
 
-* **查看系统上的docekr服务是否开启**
+* 查看系统上的docekr服务是否开启
 
 ```
 ps    -ef    | grep docker
 ```
 
-* **查看所有容器的运行状态**
+* 查看所有容器的运行状态
 
 ```
 docker    ps  -a
 ```
 
-* **查看容器中运行的进程信息**
+* 查看容器中运行的进程信息
 
 ```
 docker top [OPTIONS] CONTAINER [ps OPTIONS]
 ```
 
-* **查看本地所有images**
+* 查看本地所有images
 
 ```
 docker    images
@@ -181,49 +180,33 @@ docker    images
 
 ### Dockerfly
 
+Docker容器管理工具概述
+
 APS维护也就是对Docker容器的管理。用户可以通过多种监控管理工具来管理Docker容器，但是这些工具各有优缺点。
 
 常见的Docker监控管理工具如下：
 
-* **Kubernetes**
+* Kubernetes：可跨计算机集群部署容器，不需要开启网络端口或执行其他操作，容器可相互联系。
 
-  功能：可跨计算机集群部署容器，不需要开启网络端口或执行其他操作，容器可相互联系。
+* Dockersh：让多个用户可以连接到某个主机，每个用户都运行自行选择的单独的Docker容器所生成的外壳。
 
-* **Dockersh**
+* DockerUI：通过Web浏览器的命令行来管理的任务。
 
-  功能：让多个用户可以连接到某个主机，每个用户都运行自行选择的单独的Docker容器所生成的外壳。
-
-* **DockerUI**
-
-  功能：通过Web浏览器的命令行来管理的任务。
-
-* **Shipyard**
-
-  功能：简化对横跨多个主机的Docker容器集群进行管理。
+* Shipyard：简化对横跨多个主机的Docker容器集群进行管理。
 
   通过Web用户界面，您可以浏览相关信息，例如您的容器正在使用处理器和内存资源的情况、正在运行的容器列表等，还可以检查所有集群上的事件日志。
 
-* **Kitematic**
+* Kitematic：成为基于OSX的编程员们手里一款实用的桌面环境开发工具。
 
-  功能：成为基于OSX的编程员们手里一款实用的桌面环境开发工具。
+* Logspout：管理容器中应用的日志。
 
-* **Logspout**
+* Autodock：自动化Docker。
 
-  功能：管理容器中应用的日志。
+* Docker-in-Docker：在Docker中运行Docker。
 
-* **Autodock**
+* Heroku-Docker：用命令行将其Heroku项目转换成Docker镜像。
 
-  功能：自动化Docker。
-
-* **Docker-in-Docker**
-
-* **Heroku-Docker**
-
-  功能：用命令行将其Heroku项目转换成Docker镜像。
-
-* **DockerNodeTester**
-
-  功能：测试Docker。
+* DockerNodeTester：用于测试Docker。
 
 我们选择管理工具时，会从以下角度来考虑：
 
@@ -242,6 +225,10 @@ APS维护也就是对Docker容器的管理。用户可以通过多种监控管�
 由于DockerUI不支持多机器，Shipyard不支持批量操作，而Dockerfly对上述功能都支持，且具有部署简单、操作简单、开源的特点，因此我们选用了Dockerfly。
 
 Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，它提供了最基本的基于Docker的管理功能，目的是能够方便广大Docker初学者以及Docker管理员能够快速的进行Docker容器的管理和维护。通过Dockerfly的swarm管理，用户可以轻松的构建起一个基于Docker原生的集群系统。
+
+#### Dockerfly的安装
+
+通过Dockerfly 可以实现APS容器运行状态的Web管理以及维护。如需使用Dockerfly，请先在APS所在的主机上安装Dockerfly，然后设置物理主机端口到该容器端口的端口映射，以便用户可以在外网通过浏览器成功访问Dockerfly。
 
 #### Dockerfly的使用
 
