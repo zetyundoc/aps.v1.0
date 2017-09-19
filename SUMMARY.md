@@ -102,7 +102,7 @@
       * [LIMIT](SQL/SQL syntax/limit.md)
       * [TABLE 命令](SQL/SQL syntax/table_ming_ling.md)
 * [ CLI文档](CLI/CLI.md)
-* [DataCanvas API文档](API/api.md)
+* [API文档](API/api.md)
   * [EDS API](API/EDS API/eds api.md)
     * [通过工具调用](API/EDS API/tools.md)
       * [Ingestion](API/EDS API/ingestion.md)
