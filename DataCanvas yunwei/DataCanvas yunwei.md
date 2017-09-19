@@ -83,7 +83,97 @@ nmon -fT -s 30 -c 36
 
 ## APS应用运维
 
+### Dockershell
 
+#### Dockershell常用操作
+
+Docker shell常用命令如下表所示，详细使用说明可以通过`docker Command --help`命令进行查询。
+
+|  |  |
+| :--- | :--- |
+|  |  |
+
+
+
+#### 容器相关命令举例
+
+* **开启一个容器**
+
+```
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+* **关闭一个容器**
+
+```
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+* **删除一个容器**
+
+```
+docker rm [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+* **查看一个容器的详细信息**
+
+```
+Docker  inspect  [OPTIONS]  CONTAINER|IMAGE|TASK [CONTAINER|IMAGE|TASK...]
+```
+
+* **在docker**
+  **index中搜索image（search）**
+
+```
+docker search [OPTIONS] TERM
+```
+
+* **从docker**
+  **registry**
+  **server**
+  **中下拉image或repository（pull）**
+
+```
+docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+```
+
+* **推送一个image或repository到registry（push）**
+
+```
+docker push [OPTIONS] NAME[:TAG]
+```
+
+* **将一个容器固化为一个新的image**
+
+```
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+```
+
+**查看服务状态命令举例：**
+
+* **查看系统上的docekr服务是否开启**
+
+```
+ps    -ef    | grep docker
+```
+
+* **查看所有容器的运行状态**
+
+```
+docker    ps  -a
+```
+
+* **查看容器中运行的进程信息**
+
+```
+docker top [OPTIONS] CONTAINER [ps OPTIONS]
+```
+
+* **查看本地所有images**
+
+```
+docker    images
+```
 
 ### Dockerfly
 
