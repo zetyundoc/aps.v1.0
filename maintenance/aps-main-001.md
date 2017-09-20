@@ -236,7 +236,7 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 2. 启动dockerfly容器。
    `# docker run --name dockerfly --restart=always -d -v /var/run/docker.sock:/var/run/docker.sock  -p 2735:2735 -p 28083:28083 helyho/dockerfly:latest dockerfly`
    dockerfly依赖于socat，因此在启动dockerfly前请先确保系统中已安装socat。
-3. 在浏览器中输入http://&lt;IP&gt;:28083，其中IP为dockerfly所在服务器的IP地址。
+3. 在浏览器中输入 http://&lt;IP&gt;:28083，其中IP为dockerfly所在服务器的IP地址。
 
 以容器形式安装的dockerfly默认连接到了docker，因此可以直接进行镜像、容器等的管理。默认用户名/密码为admin/1234。
 
@@ -244,7 +244,7 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 ##### 登录系统
 
-在浏览器中访问http://&lt;IP&gt;:28083，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。
+在浏览器中访问[http://&lt;IP&gt;:28083，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。](http://<IP>:28083，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。)
 
 ![](/maintenance/fig/fig_003.png)
 
