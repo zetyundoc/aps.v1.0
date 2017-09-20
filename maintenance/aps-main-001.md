@@ -98,7 +98,7 @@ Docker shell常用命令如下表所示，详细使用说明可以通过`docker 
 | 容器rootfs命令 | commit、cp、diff |
 | 镜像仓库 | login、pull、push、search |
 | 本地镜像管理 | images、rmi、tag、build、history、save、import |
-| Info\|version | info、version |
+| 版本信息 | info、version |
 
 #### 容器相关命令示例
 
