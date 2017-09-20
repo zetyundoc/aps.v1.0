@@ -245,7 +245,7 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 ##### 登录系统
 
-在浏览器中访问“[http://&lt;IP&gt;:28083](http://<IP>:28083，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。)”，，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。
+在浏览器中访问“[http://&lt;IP&gt;:28083](http://<IP>:28083，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。)”，其中IP为dockerfly所在服务器的IP地址。进入Dockerfly登录界面，通过用户名和密码登录。
 
 ![](/maintenance/fig/fig_003.png)
 
