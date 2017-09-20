@@ -30,7 +30,9 @@ APS节点的运维项目包括主机运维以及APS应用运维两部分：
    `# ./nmon16g_x86_sles114`
    启动后，终端显示如下所示的界面。
 
-![](/DataCanvas yunwei/nmon工具使用界面.png)
+![](/maintenance/fig/fig_001.png)
+
+
 
 ### 使用nmon
 
@@ -63,7 +65,7 @@ nmon有两种使用方法，一是进入nmon界面，通过按键来查看性能
 
 在nmon信息图中查看CPU、内存和磁盘输入输出的统计情况。
 
-![](blob:file:///e63e30d2-945f-4654-b092-ff4b8e6156c2)
+![](/maintenance/fig/fig_002.png)
 
 #### 方法二
 
@@ -233,7 +235,7 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 2. 启动dockerfly容器。
    `# docker run --name dockerfly --restart=always -d -v /var/run/docker.sock:/var/run/docker.sock  -p 2735:2735 -p 28083:28083 helyho/dockerfly:latest dockerfly`
    dockerfly依赖于socat，因此在启动dockerfly前请先确保系统中已安装socat。
-3. 在浏览器中输入http://&lt;server\_ip&gt;:28083，其中server\_ip为dockerfly所在服务器的IP地址。
+3. 在浏览器中输入[http://&lt;server\_ip&gt;:28083，其中server\_ip为dockerfly所在服务器的IP地址。](http://<server_ip>:28083，其中server_ip为dockerfly所在服务器的IP地址。)
 
 以容器形式安装的dockerfly默认连接到了docker，因此可以直接进行镜像、容器等的管理。默认用户名/密码为admin/1234。
 
@@ -241,9 +243,9 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 ##### 登录系统
 
-在浏览器中访问“http://APS\_IP：映射后的物理端口号”，进入Dockerfly登录界面。通过用户名/密码进行登录。
+在浏览器中访问“[http://APS\_IP：映射后的物理端口号”，进入Dockerfly登录界面。通过用户名/密码进行登录。](http://APS_IP：映射后的物理端口号”，进入Dockerfly登录界面。通过用户名/密码进行登录。)
 
-![](/DataCanvas yunwei/登录主界面.png)
+![](/maintenance/fig/fig_003.png)
 
 ##### 系统登录界面简介
 
@@ -251,19 +253,19 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 在页面左侧的导航栏中单击&lt;Summery&gt;页签，即可看到当前主机的基本概况，包括CPU核数、已使用内存、容器和镜像的个数等。
 
-![](blob:file:///10e05c84-1064-40c1-81f8-829fd3994fd4)
+![](/maintenance/fig/fig_004.png)
 
 ##### 管理容器
 
 在页面左侧的导航栏中单击&lt;Container&gt;页签，即可显示当前主机中的容器列表。在该列表中可以查看各容器的端口映射、运行状态等，也可以实现对容器的启停以及删除操作。
 
-![](blob:file:///a20e1d3f-71cb-49ac-ac3c-e23354734321)
+![](/maintenance/fig/fig_005.png)
 
 ##### 管理镜像
 
 在页面左侧的导航栏中单击&lt;Image&gt;标签页，即可显示当前主机中的镜像列表。在该列表中可以查看各镜像的名称、创建时间、大小等，也可以实现对镜像的删除等操作。
 
-![](blob:file:///a8983305-30be-4201-b9eb-acc6b2178416)
+![](/maintenance/fig/fig_006.png)
 
 ##### 设置（Setting）
 
@@ -271,5 +273,5 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 
 Dockerfly支持跨节点的容器管理，即当多台主机上的Docker中都启用Dockerfly容器时，可以在其中一个Dockerfly管理界面实现对所有Docker的管理。要实现该功能，只要将不同的主机节点添加到Dockerfly中即可，在&lt;Setting&gt;页签下，单击“Add a host”即可添加新的Docker主机，单击主机所在行的“Default”，即可在其它页签下实现对该Docker中的容器、镜像等的管理。
 
-![](blob:file:///e7068841-2427-4f8e-963c-791f4168fc0c)
+![](/maintenance/fig/fig_007.png)
 
