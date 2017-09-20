@@ -27,7 +27,8 @@ APS节点的运维项目包括主机运维以及APS应用运维两部分：
    1. `#cd /usr/bin`
    2. `#chmod u+x nmon16g_x86_sles114`
 4. 启动nmon。
-   `# ./nmon16g_x86_sles114`
+   1. `#cd /usr/bin`
+   2. ./`#chmod u+x nmon16g_x86_sles114`
 
 启动后，终端显示如下所示的界面。
 
@@ -228,8 +229,6 @@ Dockerfly是基于Docker1.12+\(DockerAPI1.24+\)开发出的Docker管理工具，
 #### Dockerfly的安装
 
 通过Dockerfly 可以实现APS容器运行状态的Web管理以及维护。如需使用Dockerfly，请先在APS所在的主机上安装Dockerfly，然后设置物理主机端口到该容器端口的端口映射，以便用户可以在外网通过浏览器成功访问Dockerfly。
-
-
 
 1. 获取Dockerfly镜像。  
    `# docker pull helyho/dockerfly`
