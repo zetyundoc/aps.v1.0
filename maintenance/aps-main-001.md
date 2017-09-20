@@ -24,14 +24,12 @@ APS节点的运维项目包括主机运维以及APS应用运维两部分：
 1. 从[http://nmon.sourceforge.net/pmwiki.php?n=Site.Download](http://nmon.sourceforge.net/pmwiki.php?n=Site.Download)选择合适的版本进行下载。
 2. 将已下载的nmon执行文件如“nmon16g\_x86\_sles12”上传到“/usr/bin”目录下。
 3. 执行如下命令添加可执行权限。
-
-`# cd /usr/bin`
-
-`# chmod u+x nmon16g_x86_sles114`
-
-1. 启动nmon。
+   1. `#cd /usr/bin`
+   2. `#chmod u+x nmon16g_x86_sles114`
+4. 启动nmon。
    `# ./nmon16g_x86_sles114`
-   启动后，终端显示如下所示的界面。
+
+启动后，终端显示如下所示的界面。
 
 ![](/maintenance/fig/fig_001.png)
 
