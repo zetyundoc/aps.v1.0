@@ -1,4 +1,4 @@
-#DataCanvas SQL文档
+#SQL文档
 
 本文档主要介绍了EdsSQL数据库的SQL语法。
 
